@@ -7,7 +7,7 @@ var lastWordTime = null
 var wordWriteIntervals = [0]
 var wordIntervalAverage = 0
 var lastChar = null
-var totalWords = 0
+var totalWords = 1
 
 var lastKeystroke = null
 var lastKeystrokeTime = null
@@ -77,7 +77,7 @@ function incrCharCount(key) {
 }
 
 function updateStats() {
-	$('.stats').html('<p>Keystroke intervals: '+keystrokeIntervals+'</p><p>Word intervals: '+wordWriteIntervals+'</p><p>Average word interval: '+wordIntervalAverage+'</p><p>Deletes: '+deletes+'</p><p>Word count: '+wordCount+'</p><p>Characters: '+JSON.stringify(characters)+'</p>')
+	$('.stats').html('<p>Total words (inc deleted): '+totalWords+'</p><p>Keystroke intervals: '+keystrokeIntervals+'</p><p>Word intervals: '+wordWriteIntervals+'</p><p>Average word interval: '+wordIntervalAverage+'</p><p>Deletes: '+deletes+'</p><p>Word count: '+wordCount+'</p><p>Characters: '+JSON.stringify(characters)+'</p>')
 }
 
 //time between key strokes
